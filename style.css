@@ -5,12 +5,13 @@
     box-sizing: border-box;
 }
 
-/* Entire Website Background & Base Font */
+/* Entire Website Background */
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    color: #1e293b;
-    background-color: #0f172a; /* Deep Slate Navy */
+    color: #2d3748;
+    /* Changed the background of the whole website to a rich warm espresso brown */
+    background-color: #2b211d; 
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
@@ -23,10 +24,10 @@ header {
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Headings Colors */
+/* Heading Colors */
 h1 {
     font-size: 2.2rem;
     color: #1e3a8a; /* Deep Royal Blue */
@@ -35,27 +36,27 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    color: #0f766e; /* Deep Teal */
+    color: #047857; /* Emerald Green */
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 h3 {
     font-size: 1.4rem;
-    color: #4338ca; /* Deep Indigo */
+    color: #0284c7; /* Ocean Sky Blue */
     margin-top: 15px;
     margin-bottom: 8px;
 }
 
-/* Paragraph Color - Updated to Deep Slate Navy */
+/* Paragraph Text Color */
 p {
     font-size: 1rem;
-    color: #1e293b; /* Distinct, readable dark slate blue */
+    color: #334155; /* Dark Slate Blue */
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
-/* Navigation Container */
+/* Navigation Bar */
 nav {
     background-color: #1e293b; /* Dark Navy Bar */
     border-radius: 8px;
@@ -72,7 +73,7 @@ nav ul {
     width: 100%;
 }
 
-/* Navigation Links - Base State */
+/* Navigation Links Base State */
 nav ul li a {
     color: #f8fafc;
     font-size: 1rem;
@@ -83,17 +84,17 @@ nav ul li a {
     transition: all 0.15s ease-in-out;
 }
 
-/* Navigation Hover State (Mouse Hover) */
+/* Navigation Hover State */
 nav ul li a:hover {
     color: #ffffff;
-    background-color: #f59e0b; /* Vibrant Amber Gold */
+    background-color: #f43f5e; /* Vibrant Coral Pink */
 }
 
-/* Navigation Clicked State (When mouse button is held down / clicked) */
+/* Navigation Clicked State */
 nav ul li a:active {
     color: #ffffff !important;
-    background-color: #b45309 !important; /* Deep Warm Amber Click Color */
-    transform: translateY(2px) scale(0.96); /* Instant visual press effect */
+    background-color: #be123c !important; /* Deep Crimson Red Click Color */
+    transform: translateY(2px) scale(0.96);
 }
 
 /* Content Section Cards */
@@ -103,22 +104,22 @@ section {
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Inline style override support for section titles */
+/* Support for standard titles with inline styles */
 h1[style*="font-size:60px;"] {
     font-size: 1.8rem !important;
     color: #1e3a8a !important;
-    border-bottom: 3px solid #f59e0b;
+    border-bottom: 3px solid #f43f5e;
     padding-bottom: 6px;
     margin-top: 10px;
     margin-bottom: 15px;
 }
 
-/* Standard In-Text Links */
+/* In-Text Links */
 a {
-    color: #2563eb;
+    color: #e11d48;
     text-decoration: none;
     font-weight: 500;
 }
@@ -131,4 +132,38 @@ a:hover {
 footer {
     background-color: #ffffff;
     color: #475569;
-    font-size: 0.95rem
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+/* Footer Email Button */
+footer a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #f43f5e;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+footer a:hover {
+    background-color: #be123c;
+    text-decoration: none;
+}
+
+footer a:active {
+    background-color: #9f1239;
+    transform: translateY(2px) scale(0.96);
+}
