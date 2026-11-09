@@ -4,26 +4,25 @@
     box-sizing: border-box;
 }
 
-/* Entire Website Background & Base Font */
+/* Website Background & Base Font */
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
-    color: #1e293b;
-    /* Changed total background color of the website */
-    background-color: #0f172a; /* Deep modern navy background */
+    color: #334155;
+    background-color: #0f172a; /* Deep Slate Navy - Harmonizes whole page */
     max-width: 900px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Header Container */
+/* Header Box */
 header {
     background-color: #ffffff;
     padding: 25px;
     margin-bottom: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Headings Colors */
@@ -35,28 +34,29 @@ h1 {
 
 h2 {
     font-size: 1.8rem;
-    color: #0d9488; /* Teal */
+    color: #0f766e; /* Deep Teal */
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 h3 {
     font-size: 1.4rem;
-    color: #4f46e5; /* Indigo */
+    color: #4338ca; /* Deep Indigo */
     margin-top: 15px;
     margin-bottom: 8px;
 }
 
-/* Paragraph Color */
+/* Paragraph Text Color */
 p {
     font-size: 1rem;
-    color: #334155;
-    margin-bottom: 10px;
+    color: #334155; /* Soft Charcoal Gray */
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 /* Navigation Container */
 nav {
-    background-color: #1e293b;
+    background-color: #1e293b; /* Dark Navy Bar */
     border-radius: 8px;
     margin-top: 15px;
     padding: 12px;
@@ -67,62 +67,66 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 20px;
     width: 100%;
 }
 
-/* Navigation Links & Hover/Active Effects */
+/* Navigation Links Base State */
 nav ul li a {
-    color: #ffffff;
+    color: #f8fafc; /* Crisp Light Gray/White */
     font-size: 1rem;
     text-decoration: none;
     font-weight: 600;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 6px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
 }
 
+/* Navigation Hover  */
 nav ul li a:hover {
     color: #ffffff;
-    background-color: #f59e0b; /* Amber Hover */
+    background-color: #f59e0b; /* Amber Gold Accent */
 }
 
+/* Navigation Clicked State */
 nav ul li a:active {
     color: #ffffff;
-    background-color: #d97706; /* Darker Amber Click Effect */
+    background-color: #b45309; /* Deep Warm Amber */
+    transform: scale(0.97); /* Subtle button push effect */
 }
 
-/* Section Card Styling */
+/* Content Section Cards */
 section {
     background-color: #ffffff;
     width: 100%;
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Inline style override support for page titles */
+/* Heading  */
 h1[style*="font-size:60px;"] {
     font-size: 1.8rem !important;
     color: #1e3a8a !important;
-    border-bottom: 2px solid #f59e0b;
+    border-bottom: 3px solid #f59e0b;
     padding-bottom: 6px;
     margin-top: 10px;
     margin-bottom: 15px;
 }
 
-/* Standard Links in Text */
+/* Standard In-Text Links */
 a {
     color: #2563eb;
     text-decoration: none;
+    font-weight: 500;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Dedicated Footer Styling for Date & Email */
+/* Footer Container (Date & Email) */
 footer {
     background-color: #ffffff;
     color: #475569;
@@ -133,26 +137,31 @@ footer {
     padding: 20px;
     text-align: center;
     border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 footer p {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     color: #64748b;
 }
 
+/* Email Button in Footer */
 footer a {
     display: inline-block;
     color: #ffffff;
     background-color: #f59e0b;
-    padding: 8px 16px;
+    padding: 8px 18px;
     border-radius: 6px;
     font-weight: 600;
-    margin-top: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 footer a:hover {
     background-color: #d97706;
     text-decoration: none;
+}
+
+footer a:active {
+    background-color: #b45309;
+    transform: scale(0.97);
 }
