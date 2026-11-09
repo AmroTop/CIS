@@ -66,9 +66,9 @@ li {
     margin-bottom: 8px;
 }
 
-/* Inline style overrides support */
+/* Inline style overrides support for large headings */
 h1[style*="font-size:60px;"] {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     border-bottom: 2px solid #1abc9c;
     padding-bottom: 5px;
     margin-top: 30px;
