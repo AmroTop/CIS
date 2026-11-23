@@ -5,14 +5,13 @@
     box-sizing: border-box;
 }
 
-/* Entire Website Background */
+/* Centered Page Container */
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
     color: #2d3748;
-    /* Changed the background of the whole website to a rich warm espresso brown */
-    background-color: #2b211d; 
-    max-width: 900px;
+    background-color: #2b211d; /* Rich warm espresso brown */
+    max-width: 960px;
     width: 100%;
     margin: 0 auto;
     padding: 20px;
@@ -22,7 +21,7 @@ body {
 header {
     background-color: #ffffff;
     padding: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -31,20 +30,20 @@ header {
 h1 {
     font-size: 2.2rem;
     color: #1e3a8a; /* Deep Royal Blue */
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
     color: #047857; /* Emerald Green */
-    margin-top: 20px;
+    margin-top: 12px;
     margin-bottom: 10px;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     color: #0284c7; /* Ocean Sky Blue */
-    margin-top: 15px;
+    margin-top: 14px;
     margin-bottom: 8px;
 }
 
@@ -53,10 +52,10 @@ p {
     font-size: 1rem;
     color: #334155; /* Dark Slate Blue */
     line-height: 1.6;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
-/* Navigation Bar */
+/* Horizontal Navigation Bar */
 nav {
     background-color: #1e293b; /* Dark Navy Bar */
     border-radius: 8px;
@@ -67,21 +66,23 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     width: 100%;
 }
 
 /* Navigation Links Base State */
 nav ul li a {
+    display: inline-block;
     color: #f8fafc;
     font-size: 1rem;
     text-decoration: none;
     font-weight: 600;
     padding: 8px 16px;
     border-radius: 6px;
-    transition: all 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 /* Navigation Hover State */
@@ -92,29 +93,48 @@ nav ul li a:hover {
 
 /* Navigation Clicked State */
 nav ul li a:active {
-    color: #ffffff !important;
-    background-color: #be123c !important; /* Deep Crimson Red Click Color */
+    color: #ffffff;
+    background-color: #be123c; /* Deep Crimson Red */
     transform: translateY(2px) scale(0.96);
+}
+
+/* Main Content Layout Containers */
+main.two-column {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+main.one-column {
+    display: block;
 }
 
 /* Content Section Cards */
 section {
     background-color: #ffffff;
-    width: 100%;
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Support for standard titles with inline styles */
-h1[style*="font-size:60px;"] {
-    font-size: 1.8rem !important;
-    color: #1e3a8a !important;
-    border-bottom: 3px solid #f43f5e;
-    padding-bottom: 6px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+#leftColumn {
+    flex: 1 1 65%;
+    min-width: 0;
+}
+
+#rightColumn {
+    flex: 1 1 35%;
+    min-width: 0;
+}
+
+/* Images Inside Content */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 12px 0;
 }
 
 /* In-Text Links */
@@ -135,7 +155,7 @@ footer {
     font-size: 0.95rem;
     font-weight: 500;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 20px;
     text-align: center;
     border-radius: 12px;
@@ -143,11 +163,11 @@ footer {
 }
 
 footer p {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: #475569;
 }
 
-/* Footer Email Button */
+/* Footer Email / Action Button */
 footer a {
     display: inline-block;
     color: #ffffff;
@@ -166,4 +186,17 @@ footer a:hover {
 footer a:active {
     background-color: #9f1239;
     transform: translateY(2px) scale(0.96);
+}
+
+/* Responsive Stacking on Smaller Screens */
+@media (max-width: 700px) {
+    main.two-column {
+        flex-direction: column;
+    }
+
+    #leftColumn,
+    #rightColumn {
+        width: 100%;
+        flex: 1 1 100%;
+    }
 }
