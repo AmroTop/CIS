@@ -61,11 +61,11 @@ h2 {
 
 main img {
   display: block;
-  max-width: 240px;
+  max-width: 100%;
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 0.75rem 0 1rem;
+  margin: 12px auto;
 }
 
 main ul {
